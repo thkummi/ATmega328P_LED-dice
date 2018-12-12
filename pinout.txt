@@ -1,0 +1,16 @@
+	LED1 (pin13)			LED2 (pin10)
+
+
+
+
+	LED3 (pin11)	LED4(pin12)	LED5 (pin11)
+
+
+
+	
+	LED6 (pin10)			LED7 (pin13)
+
+
+all LEDs with 470 Ohm resistor
+
+pin9 with 10k resistor to GND and button between pin 9 to +5V 
