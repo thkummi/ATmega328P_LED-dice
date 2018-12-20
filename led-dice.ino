@@ -13,9 +13,7 @@ int PinLedGr3 = 10;
 int PinLedGr4 = 12;
 int PinButton = 9;        //Pin for Button
 int buttonState;
-char ran;                 //Random number for dice
-int time;                 //Delay time
-int i;                    //dice ’rolling’ counter
+
 
 void setup() {
   Serial.begin(9600);
@@ -28,12 +26,12 @@ void setup() {
 }
 
 void dice () {
-  time = 20;                //timer for rolling effect
-  i=0;                      //counter for rolling effect to zero
-    while (i<10) {          //start rolling loop 
+  char ran;                 //Random number for dice
+  int time = 20;            //timer for rolling effect
+  int i;                    //counter for rolling effect to zero
+  for (i=0;i<10;i++) {      //start rolling loop 
       if(i==9) time=5000;   //until it flipped 9 times, 5 sec final delay
       time=time+40;         //makes the 'rolling' slower
-      i++;                  //increase the counter
       ran = random(1, 7);   //generate number between 1 and 6
       switch(ran) {         //switsh on LED groups to appear like a phycical dice. Knowledge how a dice looks is expected 
         case 1: digitalWrite (PinLedGr4, HIGH); //led group on
